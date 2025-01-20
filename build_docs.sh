@@ -5,6 +5,7 @@ set -o errexit -o nounset -o pipefail
 # Make this script parent directory the CWD:
 cd $(dirname ${BASH_SOURCE[0]})
 CONF_DIR=$PWD
+pip install -r requirements.txt
 cd ../..
 export MOTIS_REPO_NAME=$(basename "$PWD")
 if ! [ -d docs ]; then
