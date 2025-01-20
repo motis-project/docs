@@ -13,7 +13,8 @@ if ! [ -d docs ]; then
     exit 1
 fi
 cd docs
-envsubst < "${CONF_DIR}/Doxyfile" | doxygen
+envsubst < "${CONF_DIR}/Doxyfile" > Doxyfile
+doxygen
 envsubst < "${CONF_DIR}/conf.py" > conf.py
 sphinx-build -M html . _build
 mv _build/html ../public
