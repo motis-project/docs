@@ -1,8 +1,6 @@
 Documentation was originally setup following this tutorial:
 [Clear, Functional C++ Documentation with Sphinx + Breathe + Doxygen + CMake](https://devblogs.microsoft.com/cppblog/clear-functional-c-documentation-with-sphinx-breathe-doxygen-cmake/)
 
-The documentation is then published to GitHub Pages: <https://motis-project.github.io/utl/>
-
 [breathe](https://breathe.readthedocs.io) is used to insert Doxygen doc snippets
 into the Sphinx-generated documentation.
 
@@ -61,3 +59,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: public/
 ```
+
+The documentation is then published to GitHub Pages.
+Example: <https://motis-project.github.io/utl/>
