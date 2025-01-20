@@ -15,6 +15,7 @@ fi
 cd docs
 envsubst < "${CONF_DIR}/Doxyfile" > Doxyfile
 doxygen
+cp "${CONF_DIR}/motis-logo.svg" .
 envsubst < "${CONF_DIR}/conf.py" > conf.py
 sphinx-build -M html . _build
 mv _build/html ../public
